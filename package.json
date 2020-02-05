@@ -1,0 +1,19 @@
+{
+  "name": "brain-games-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinoptik93/frontend-project-lvl1.git"
+  },
+  "author": "Chepukhin S.V.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sinoptik93/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Sinoptik93/frontend-project-lvl1#readme"
+}

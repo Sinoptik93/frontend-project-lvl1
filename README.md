@@ -8,4 +8,5 @@
 
 ## Игра "Brain-even"
 пример asciinema
+
 <a href="https://asciinema.org/a/OqA8R23NkdokAiXUleqFsO2Fe" target="_blank"><img src="https://asciinema.org/a/OqA8R23NkdokAiXUleqFsO2Fe.svg" /></a>

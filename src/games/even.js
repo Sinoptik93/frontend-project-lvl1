@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetings from '../index.js';
 
-greetings();
+const userName = greetings();
 
 // Configuration
 const min = 1;
@@ -9,7 +9,7 @@ const max = 100;
 const roundToWins = 3;
 
 // Function to generate random integer
-const getRandom = (min, max) => Math.floor(Math.random() * max) + min;
+const getRandom = (minVal, maxVal) => Math.floor(Math.random() * maxVal) + minVal;
 
 // BRAIN-EVEN game logic
 const brainEven = () => {
@@ -18,8 +18,8 @@ const brainEven = () => {
 
   for (let i = 0; i !== roundToWins; i += 1) {
     const question = getRandom(min, max);
-    const rightAnswer = (question % 2 === 0)? 'yes' : 'no';
-    
+    const rightAnswer = (question % 2 === 0) ? 'yes' : 'no';
+
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -27,12 +27,12 @@ const brainEven = () => {
       result += 1;
       console.log('Correct!\n');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, $userName!\n`);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!\n`);
       return;
     }
 
     if (result === roundToWins) {
-      return console.log(`Congratulation, $userName!`);
+      console.log(`Congratulation, ${userName}!`);
     }
   }
 };

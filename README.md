@@ -8,4 +8,4 @@
 
 ## Игра "Brain-even"
 пример asciinema
-[![asciicast](https://asciinema.org/a/u9s0kekCW7pEoiIEHj1tJreXF.svg)](https://asciinema.org/a/u9s0kekCW7pEoiIEHj1tJreXF)
+<a href="https://asciinema.org/a/7gXJVE01QTqKuUJrgyeTokCZM" target="_blank"><img src="https://asciinema.org/a/7gXJVE01QTqKuUJrgyeTokCZM.svg" /></a>

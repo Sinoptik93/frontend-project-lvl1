@@ -1,22 +1,22 @@
 import readlineSync from 'readline-sync';
-import greetings from '../index.js';
+import { greetings } from '../index.js';
 
 const userName = greetings();
 
 // Configuration
 const min = 1;
 const max = 100;
-const roundToWins = 3;
+const roundsToWin = 3;
 
 // Function to generate random integer
 const getRandom = (minVal, maxVal) => Math.floor(Math.random() * maxVal) + minVal;
 
-// BRAIN-EVEN game logic
+// BRAIN EVEN game logic
 const brainEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let result = 0;
 
-  for (let i = 0; i !== roundToWins; i += 1) {
+  for (let i = 0; i !== roundsToWin; i += 1) {
     const question = getRandom(min, max);
     const rightAnswer = (question % 2 === 0) ? 'yes' : 'no';
 
@@ -31,7 +31,7 @@ const brainEven = () => {
       return;
     }
 
-    if (result === roundToWins) {
+    if (result === roundsToWin) {
       console.log(`Congratulation, ${userName}!`);
     }
   }

@@ -2,37 +2,36 @@ import readlineSync from 'readline-sync';
 
 // Function to generate game random integer.
 const getRandom = (minVal, maxVal) => Math.floor(Math.random() * maxVal) + minVal;
-
-// Function of greeting user.
+const sample = (array) => {
+  const len = array == null ? 0 : array.length;
+  return len ? array[Math.floor(Math.random() * len)] : undefined;
+};
 
 // How many answer required for the user win.
 const answersToWin = 3;
 
 // GAME ENGINE
-const gameEngine = (gameDescription, question, rightAnswer) => {
+const gameEngine = (gameDescription, generator) => {
   console.log('\nWelcome to the Brain Games!\n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
   gameDescription();
 
-  for (let round = 0; round !== answersToWin; i += 1) {
+  for (let round = 0; round !== answersToWin; round += 1) {
+    const condition = generator();
+    const [question, rightAnswer] = condition;
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === rightAnswer) {
+    if (userAnswer == rightAnswer) {
       console.log('Correct!\n');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!\n`);
+      console.log(`\n"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!\n`);
       return;
     }
-
-    if (round === answersToWin) {
-      console.log(`\nCongratulation, ${userName}!\n`);
-    }
   }
-
+  console.log(`\nCongratulation, ${userName}!\n`);
 };
 
-export default gameEngine;
-export { getRandom };
+export { gameEngine, getRandom, sample };

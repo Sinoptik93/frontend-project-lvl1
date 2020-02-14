@@ -13,10 +13,10 @@ const generator = () => {
   const getRandomCount2 = getRandom(min, max);
   const operator = ['+', '-', '*'];
   const getRandomOperator = sample(operator);
-  
+
   const question = `${getRandomCount1} ${getRandomOperator} ${getRandomCount2}`;
   const rightAnswer = eval(question);
-  
+
   const result = [question, rightAnswer];
   return result;
 };

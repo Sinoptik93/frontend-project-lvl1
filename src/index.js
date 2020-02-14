@@ -7,20 +7,30 @@ const sample = (array) => {
   return len ? array[Math.floor(Math.random() * len)] : undefined;
 };
 
+const greetings = () => {
+  console.log('\nWelcome to the Brain Games!\n');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
+}
+
 // How many answer required for the user win.
 const answersToWin = 3;
 
 // GAME ENGINE
 const gameEngine = (gameDescription, generator) => {
+  // Starting and greeting of the game.
   console.log('\nWelcome to the Brain Games!\n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
+  // Incomming game description from /src/games/*gameDataFile.js.
   gameDescription();
 
   for (let round = 0; round !== answersToWin; round += 1) {
+    // Game conditions generation (question/answer) from /src/games/*gameDataFile.js.
     const condition = generator();
     const [question, rightAnswer] = condition;
+
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -34,4 +44,4 @@ const gameEngine = (gameDescription, generator) => {
   console.log(`\nCongratulation, ${userName}!\n`);
 };
 
-export { gameEngine, getRandom, sample };
+export { gameEngine, getRandom, sample, greetings };

@@ -29,3 +29,12 @@ About game
 About launch game
 
 <a href="https://asciinema.org/a/RxAVNifbQl7GsEJxVlDCDcSDf" target="_blank"><img src="https://asciinema.org/a/RxAVNifbQl7GsEJxVlDCDcSDf.svg" /></a>
+
+## Game "Brain-progression"
+### About
+About game
+
+### Launch game
+About launch game
+
+<a href="https://asciinema.org/a/F1moVTGVfBEaxBBkWvRnVmkqk" target="_blank"><img src="https://asciinema.org/a/F1moVTGVfBEaxBBkWvRnVmkqk.svg" /></a>

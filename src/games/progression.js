@@ -12,18 +12,18 @@ const generator = () => {
   const countOfProgression = getRandom(min, max);
   const replacedChar = getRandom(0, 9);
 
-  let progression = [];
+  let progression = '';
   let acc = 0;
   let rightAnswer = 0;
 
   for (let i = 0; i !== 9; i += 1) {
     if (i === replacedChar) {
       acc += countOfProgression;
-      progression.push('..');
+      progression += (' ..');
       rightAnswer = `${acc}`;
-    } else progression.push(acc += countOfProgression);
+    } else progression += (` ${acc += countOfProgression}`);
   }
-  const question = `${progression}`;
+  const question = progression.toString();
 
   const result = [question, rightAnswer];
   return result;

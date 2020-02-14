@@ -1,6 +1,7 @@
 import { gameEngine, getRandom } from '../index.js';
 
-// Configuration
+// CONFIGURATION //
+// Random integer counts.
 const min = 1;
 const max = 100;
 

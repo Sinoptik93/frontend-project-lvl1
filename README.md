@@ -20,3 +20,12 @@ About game
 About launch game
 
 <a href="https://asciinema.org/a/TMjCAFHRzcNehCrhb1cxJmpf5" target="_blank"><img src="https://asciinema.org/a/TMjCAFHRzcNehCrhb1cxJmpf5.svg" /></a>
+
+## Game "Brain-GCD"
+### About
+About game
+
+### Launch game
+About launch game
+
+<a href="https://asciinema.org/a/RxAVNifbQl7GsEJxVlDCDcSDf" target="_blank"><img src="https://asciinema.org/a/RxAVNifbQl7GsEJxVlDCDcSDf.svg" /></a>

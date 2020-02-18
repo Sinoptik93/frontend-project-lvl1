@@ -6,7 +6,7 @@ import { getRandom } from '../utils.js';
 const min = 1;
 const max = 100;
 
-// BRAIN EVEN game logic
+// Game "Even"
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateData = () => {

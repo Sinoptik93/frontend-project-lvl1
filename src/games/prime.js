@@ -1,4 +1,5 @@
-import { gameEngine, getRandom } from '../index.js';
+import gameEngine from '../index.js';
+import { getRandom } from '../utils.js';
 
 // CONFIGURATION //
 // Random integer counts.
@@ -6,9 +7,9 @@ const min = 1;
 const max = 25;
 
 // Game "Prime"
-const gameDescription = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generator = () => {
+const generateData = () => {
   const isPrime = (number) => {
     if (number < 2) {
       return false;
@@ -29,6 +30,6 @@ const generator = () => {
   return result;
 };
 
-const brainPrime = () => gameEngine(gameDescription, generator);
+const brainPrime = () => gameEngine(gameDescription, generateData);
 
 export default brainPrime;

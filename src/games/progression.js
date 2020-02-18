@@ -1,27 +1,33 @@
-import { gameEngine, getRandom } from '../index.js';
+import gameEngine from '../index.js';
+import { getRandom } from '../utils.js';
 
 // CONFIGURATION //
 // Random integer counts.
 const min = 2;
 const max = 10;
+const progressionLength = 10;
 
 // Game "Progression"
-const gameDescription = () => console.log('What number is missing in the progression?');
+const gameDescription = 'What number is missing in the progression?';
 
-const generator = () => {
+const generateData = () => {
+  const startNumber = getRandom(min, max);
   const countOfProgression = getRandom(min, max);
   const replacedChar = getRandom(0, 9);
 
   let progression = '';
-  let acc = 0;
   let rightAnswer = 0;
 
-  for (let i = 0; i !== 9; i += 1) {
-    if (i === replacedChar) {
-      acc += countOfProgression;
-      progression += (' ..');
-      rightAnswer = `${acc}`;
-    } else progression += (` ${acc += countOfProgression}`);
+  for (let step = 0; step !== progressionLength; step += 1) { //Fixed
+
+    const currentChar = startNumber + countOfProgression * step;
+
+    if (replacedChar === step) {
+      progression += ' ..';
+      rightAnswer += currentChar;
+    } else {
+      progression += (` ${currentChar}`);
+    }
   }
   const question = progression.toString();
 
@@ -29,6 +35,6 @@ const generator = () => {
   return result;
 };
 
-const brainProgression = () => gameEngine(gameDescription, generator);
+const brainProgression = () => gameEngine(gameDescription, generateData);
 
 export default brainProgression;

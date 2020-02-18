@@ -1,34 +1,21 @@
 import readlineSync from 'readline-sync';
 
-// Function to generate game random integer.
-const getRandom = (minVal, maxVal) => Math.floor(Math.random() * maxVal) + minVal;
-const sample = (array) => {
-  const len = array == null ? 0 : array.length;
-  return len ? array[Math.floor(Math.random() * len)] : undefined;
-};
-
-const greetings = () => {
-  console.log('\nWelcome to the Brain Games!\n');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
-}
-
 // How many answer required for the user win.
 const answersToWin = 3;
 
 // GAME ENGINE
-const gameEngine = (gameDescription, generator) => {
+const gameEngine = (gameDescription, generateData) => {
   // Starting and greeting of the game.
   console.log('\nWelcome to the Brain Games!\n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
   // Incomming game description from /src/games/*gameDataFile.js.
-  gameDescription();
+  console.log(gameDescription);
 
   for (let round = 0; round !== answersToWin; round += 1) {
     // Game conditions generation (question/answer) from /src/games/*gameDataFile.js.
-    const condition = generator();
+    const condition = generateData();
     const [question, rightAnswer] = condition;
 
     console.log(`Question: ${question}`);
@@ -44,4 +31,4 @@ const gameEngine = (gameDescription, generator) => {
   console.log(`\nCongratulation, ${userName}!\n`);
 };
 
-export { gameEngine, getRandom, sample, greetings };
+export default gameEngine;

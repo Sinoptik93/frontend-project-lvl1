@@ -18,8 +18,7 @@ const generateData = () => {
   let progression = '';
   let rightAnswer = 0;
 
-  for (let step = 0; step !== progressionLength; step += 1) { //Fixed
-
+  for (let step = 0; step !== progressionLength; step += 1) {
     const currentChar = startNumber + countOfProgression * step;
 
     if (replacedChar === step) {

@@ -9,7 +9,7 @@ const max = 100;
 // Game "GCD"
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (num1, num2) => ((num2 === 0) ? num1 : gcd(num2, num1 % num2)); //Fixed
+const gcd = (num1, num2) => ((num2 === 0) ? num1 : gcd(num2, num1 % num2));
 
 const generateData = () => {
   const getRandomCount1 = getRandom(min, max);

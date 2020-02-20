@@ -5,11 +5,11 @@
 
 ## Description
 Set from 5 console games:
-1. Brain-even
-2. Brain-calc
-3. Brain-GCD
-4. Brain-progression
-5. Brain-prime
+1. [Brain-even](https://github.com/Sinoptik93/frontend-project-lvl1#game-brain-even)
+2. [Brain-calc](https://github.com/Sinoptik93/frontend-project-lvl1#game-brain-calc)
+3. [Brain-GCD](https://github.com/Sinoptik93/frontend-project-lvl1#game-brain-gcd)
+4. [Brain-progression](https://github.com/Sinoptik93/frontend-project-lvl1#game-brain-progression)
+5. [Brain-prime](https://github.com/Sinoptik93/frontend-project-lvl1#game-brain-prime)
 
 ## Installing
 Before installing you need to required in install of [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/).

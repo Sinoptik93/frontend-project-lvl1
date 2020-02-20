@@ -75,15 +75,12 @@ found 0 vulnerabilities
 /usr/local/bin/brain-games -> /usr/local/lib/node_modules/brain-games-jan2020/bin/brain-games.js
 /usr/local/lib/node_modules/brain-games-jan2020 -> /home/sinner/git/Hexlet/frontend-project-lvl1
 ```
-3. check link by typing `brain-games` in console, you will be greeting ;)
-```
-frontend-project-lvl1$ brain-games
 
-Welcome to the Brain Games!
+3. installing with `npm publish`:
 
-May I have your name? Sergey
-Hello, Sergey!
-```
+<a href="https://asciinema.org/a/mdPitzuuwmU52f4tLbNGjqiVy" target="_blank"><img src="https://asciinema.org/a/mdPitzuuwmU52f4tLbNGjqiVy.svg" /></a>
+
+
 ## Game "Brain-even"
 ### About
 Your target - is to determine the random number: even or not.
@@ -94,7 +91,6 @@ Input next command to launch game:
 ```
 $ brain-even
 ```
-
 <a href="https://asciinema.org/a/OqA8R23NkdokAiXUleqFsO2Fe" target="_blank"><img src="https://asciinema.org/a/OqA8R23NkdokAiXUleqFsO2Fe.svg" /></a>
 
 
@@ -107,8 +103,8 @@ Remember school arithmetic and show your brilliant knowledges by counting random
 ```
 $ brain-calc
 ```
-
 <a href="https://asciinema.org/a/TMjCAFHRzcNehCrhb1cxJmpf5" target="_blank"><img src="https://asciinema.org/a/TMjCAFHRzcNehCrhb1cxJmpf5.svg" /></a>
+
 
 ## Game "Brain-GCD"
 ### About
@@ -119,8 +115,8 @@ Find the greatest common divisor  for two random numbers.
 ```
 $ brain-gcd
 ```
-
 <a href="https://asciinema.org/a/RxAVNifbQl7GsEJxVlDCDcSDf" target="_blank"><img src="https://asciinema.org/a/RxAVNifbQl7GsEJxVlDCDcSDf.svg" /></a>
+
 
 ## Game "Brain-progression"
 ### About
@@ -131,8 +127,8 @@ Write a missing number in increasing progression.
 ```
 $ brain-progression
 ```
-
 <a href="https://asciinema.org/a/F1moVTGVfBEaxBBkWvRnVmkqk" target="_blank"><img src="https://asciinema.org/a/F1moVTGVfBEaxBBkWvRnVmkqk.svg" /></a>
+
 
 ## Game "Brain-prime"
 ### About
@@ -143,5 +139,4 @@ You need to answer the question: is the current random number prime?
 ```
 $ brain-prime
 ```
-
 <a href="https://asciinema.org/a/b7mivZ1lJQcAdfGuUJVbb7yvr" target="_blank"><img src="https://asciinema.org/a/b7mivZ1lJQcAdfGuUJVbb7yvr.svg" /></a>

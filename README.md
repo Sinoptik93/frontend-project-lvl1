@@ -1,7 +1,8 @@
 # Project I | Hexlet "Brain games" | Frontend
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-[![Build Status](https://travis-ci.com/Sinoptik93/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Sinoptik93/frontend-project-lvl1)
+[![Node CI](https://github.com/Sinoptik93/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Sinoptik93/frontend-project-lvl1/actions)
+[![Build](https://travis-ci.com/Sinoptik93/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Sinoptik93/frontend-project-lvl1)
 
 ## Description
 Set from 5 console games:
@@ -18,7 +19,7 @@ Check in your console next command:
 $ node -v
 ```
 and 
-```
+``` 
 $ npm -v
 ```
 you must have version for Node.js (example `v13.7.0`) and NPM (example `6.13.7`). If you don't, make next steps. 

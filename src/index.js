@@ -15,8 +15,7 @@ const gameEngine = (gameDescription, generateData) => {
 
   for (let round = 0; round !== answersToWin; round += 1) {
     // Game conditions generation (question/answer) from /src/games/*gameDataFile.js.
-    const condition = generateData();
-    const [question, rightAnswer] = condition;
+    const [question, rightAnswer] = generateData();
 
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
@@ -24,7 +23,8 @@ const gameEngine = (gameDescription, generateData) => {
     if (userAnswer === rightAnswer) {
       console.log('Correct!\n');
     } else {
-      console.log(`\n"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!\n`);
+      console.log(`\n"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
+      console.log(`Let's try again, ${userName}!\n`);
       return;
     }
   }

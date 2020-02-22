@@ -1,5 +1,5 @@
 import gameEngine from '../index.js';
-import { getRandom } from '../utils.js';
+import getRandom from '../utils.js';
 
 // CONFIGURATION //
 // Random integer counts.
@@ -15,7 +15,7 @@ const generateData = () => {
       return false;
     }
 
-    for (let i = 2; i < number; i += 1) {
+    for (let i = 2; i < number / 2; i += 1) {
       if (number % i === 0) {
         return false;
       }
@@ -30,6 +30,6 @@ const generateData = () => {
   return result;
 };
 
-const brainPrime = () => gameEngine(gameDescription, generateData);
+const launchBrainPrime = () => gameEngine(gameDescription, generateData);
 
-export default brainPrime;
+export default launchBrainPrime;

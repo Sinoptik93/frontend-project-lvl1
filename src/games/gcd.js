@@ -1,5 +1,5 @@
 import gameEngine from '../index.js';
-import { getRandom } from '../utils.js';
+import getRandom from '../utils.js';
 
 // CONFIGURATION //
 // Random integer counts.
@@ -22,6 +22,6 @@ const generateData = () => {
   return result;
 };
 
-const brainGcd = () => gameEngine(gameDescription, generateData);
+const launchBrainGcd = () => gameEngine(gameDescription, generateData);
 
-export default brainGcd;
+export default launchBrainGcd;

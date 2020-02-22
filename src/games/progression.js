@@ -1,39 +1,41 @@
 import gameEngine from '../index.js';
-import { getRandom } from '../utils.js';
+import getRandom from '../utils.js';
 
 // CONFIGURATION //
 // Random integer counts.
 const min = 2;
 const max = 10;
 const progressionLength = 10;
+const firstIndexToReplace = 0;
+const lastIndexToReplace = 9;
 
 // Game "Progression"
 const gameDescription = 'What number is missing in the progression?';
 
 const generateData = () => {
   const startNumber = getRandom(min, max);
-  const countOfProgression = getRandom(min, max);
-  const replacedChar = getRandom(0, 9);
+  const stepOfProgression = getRandom(min, max);
+  const replacedChar = getRandom(firstIndexToReplace, lastIndexToReplace);
 
-  let progression = '';
-  let rightAnswer = 0;
+  const progression = [];
+  let rightAnswer = '';
 
-  for (let step = 0; step !== progressionLength; step += 1) {
-    const currentChar = startNumber + countOfProgression * step;
+  for (let count = 0; count < progressionLength; count += 1) {
+    const currentChar = startNumber + stepOfProgression * count;
 
-    if (replacedChar === step) {
-      progression += ' ..';
-      rightAnswer += currentChar;
+    if (replacedChar === count) {
+      progression.push('..');
+      rightAnswer = `${currentChar}`;
     } else {
-      progression += (` ${currentChar}`);
+      progression.push(currentChar);
     }
   }
-  const question = progression.toString();
+  const question = progression.join(' ');
 
   const result = [question, rightAnswer];
   return result;
 };
 
-const brainProgression = () => gameEngine(gameDescription, generateData);
+const launchBrainProgression = () => gameEngine(gameDescription, generateData);
 
-export default brainProgression;
+export default launchBrainProgression;

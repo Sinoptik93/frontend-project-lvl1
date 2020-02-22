@@ -1,7 +1,7 @@
 {
   "name": "brain-games-jan2020",
-  "version": "1.0.3",
-  "description": "Hexlet education project",
+  "version": "1.0.9",
+  "description": "Hexlet first education project (frontend)",
   "main": "src/index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",

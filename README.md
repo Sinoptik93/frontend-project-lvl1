@@ -84,6 +84,7 @@ found 0 vulnerabilities
 ## Game "Brain-even"
 ### About
 Your target - is to determine the random number: even or not.
+
 *You can adjust the difficulty by changing the configuration parameters in `src/games/even.js` -> Section `// CONFIGURATION //`
 
 ### Launch game
@@ -109,6 +110,7 @@ $ brain-calc
 ## Game "Brain-GCD"
 ### About
 Find the greatest common divisor  for two random numbers.
+
 *You can adjust the difficulty by changing the configuration parameters in `src/games/gcd.js` -> Section `// CONFIGURATION //`
 
 ### Launch game
@@ -121,6 +123,7 @@ $ brain-gcd
 ## Game "Brain-progression"
 ### About
 Write a missing number in increasing progression.
+
 *You can adjust the difficulty by changing the configuration parameters in `src/games/progression.js` -> Section `// CONFIGURATION //`
 
 ### Launch game
@@ -133,6 +136,7 @@ $ brain-progression
 ## Game "Brain-prime"
 ### About
 You need to answer the question: is the current random number prime?
+
 *You can adjust the difficulty by changing the configuration parameters in `src/games/prime.js` -> Section `// CONFIGURATION //`
 
 ### Launch game

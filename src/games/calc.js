@@ -1,5 +1,5 @@
 import gameEngine from '../index.js';
-import { getRandom, sample } from '../utils.js';
+import getRandom from '../utils.js';
 
 // CONFIGURATION //
 // Random integer counts.
@@ -9,28 +9,42 @@ const max = 10;
 // Game "Calculate"
 const gameDescription = 'What is the result of the expression?".';
 
+// Function to get sample from array.
+const sample = (array) => {
+  const startNum = 0.1;
+  const lastNum = 0.9;
+  const len = array == null ? 0 : array.length;
+  return len ? array[Math.floor(getRandom(startNum, lastNum) * len)] : undefined;
+};
+
 const operators = ['+', '-', '*'];
 
 const generateData = () => {
-  const getRandomCount1 = getRandom(min, max);
-  const getRandomCount2 = getRandom(min, max);
-  const getRandomOperator = sample(operators);
+  const randomCount1 = getRandom(min, max);
+  const randomCount2 = getRandom(min, max);
+  const randomOperator = sample(operators);
 
-  const question = `${getRandomCount1} ${getRandomOperator} ${getRandomCount2}`;
+  const question = `${randomCount1} ${randomOperator} ${randomCount2}`;
   let rightAnswer;
 
-  if (getRandomOperator === '+') {
-    rightAnswer = getRandomCount1 + getRandomCount2;
-  } else if (getRandomOperator === '-') {
-    rightAnswer = getRandomCount1 - getRandomCount2;
-  } else {
-    rightAnswer = getRandomCount1 * getRandomCount2;
+  switch (randomOperator) {
+    case '+':
+      rightAnswer = (randomCount1 + randomCount2).toString();
+      break;
+    case '-':
+      rightAnswer = (randomCount1 - randomCount2).toString();
+      break;
+    case '*':
+      rightAnswer = (randomCount1 * randomCount2).toString();
+      break;
+    default:
+      break;
   }
 
   const result = [question, rightAnswer];
   return result;
 };
 
-const calcGame = () => gameEngine(gameDescription, generateData);
+const launchCalcGame = () => gameEngine(gameDescription, generateData);
 
-export default calcGame;
+export default launchCalcGame;

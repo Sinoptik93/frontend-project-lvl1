@@ -7,7 +7,7 @@ const min = 2;
 const max = 10;
 const progressionLength = 10;
 const firstIndexToReplace = 0;
-const lastIndexToReplace = 9;
+const lastIndexToReplace = progressionLength - 1;
 
 // Game "Progression"
 const gameDescription = 'What number is missing in the progression?';

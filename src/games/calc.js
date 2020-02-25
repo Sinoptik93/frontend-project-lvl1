@@ -21,19 +21,19 @@ const generateData = () => {
 
   switch (randomOperator) {
     case '+':
-      rightAnswer = (randomCount1 + randomCount2).toString();
+      rightAnswer = randomCount1 + randomCount2;
       break;
     case '-':
-      rightAnswer = (randomCount1 - randomCount2).toString();
+      rightAnswer = randomCount1 - randomCount2;
       break;
     case '*':
-      rightAnswer = (randomCount1 * randomCount2).toString();
+      rightAnswer = randomCount1 * randomCount2;
       break;
     default:
       break;
   }
 
-  const result = [question, rightAnswer];
+  const result = [question, rightAnswer.toString()];
   return result;
 };
 

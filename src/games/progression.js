@@ -15,7 +15,7 @@ const gameDescription = 'What number is missing in the progression?';
 const generateData = () => {
   const startNumber = getRandom(min, max);
   const stepOfProgression = getRandom(min, max);
-  const replacedChar = getRandom(firstIndexToReplace, lastIndexToReplace);
+  const replacedCharIndex = getRandom(firstIndexToReplace, lastIndexToReplace);
 
   const progression = [];
   let rightAnswer = '';
@@ -23,7 +23,7 @@ const generateData = () => {
   for (let count = 0; count < progressionLength; count += 1) {
     const currentChar = startNumber + stepOfProgression * count;
 
-    if (replacedChar === count) {
+    if (replacedCharIndex === count) {
       progression.push('..');
       rightAnswer = `${currentChar}`;
     } else {

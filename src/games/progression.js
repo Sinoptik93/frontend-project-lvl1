@@ -18,21 +18,20 @@ const generateData = () => {
   const replacedCharIndex = getRandom(firstIndexToReplace, lastIndexToReplace);
 
   const progression = [];
-  let rightAnswer = '';
+  const rightAnswer = startNumber + stepOfProgression * replacedCharIndex;
 
   for (let count = 0; count < progressionLength; count += 1) {
     const currentChar = startNumber + stepOfProgression * count;
 
     if (replacedCharIndex === count) {
       progression.push('..');
-      rightAnswer = `${currentChar}`;
     } else {
       progression.push(currentChar);
     }
   }
   const question = progression.join(' ');
 
-  const result = [question, rightAnswer];
+  const result = [question, rightAnswer.toString()];
   return result;
 };
 

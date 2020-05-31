@@ -29,12 +29,12 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.9.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "you-dont-need-lodash-underscore": "^3.0.1"
   }
 }
